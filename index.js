@@ -23,7 +23,7 @@ app.use(morgan(':method :url :status :param[id] - :response-time ms :body'));
 
 // Rutas a Habilitar
 //API
-app.use('/api/books',checkApiKey,booksRoutes); // a nivel global ponemos el checkApiKey
+app.use('/api/books',checkApiKey,booksRoutes); // a nivel global ponemos el checkApiKey.
 app.use('/api/products',productsRoutes); //prefijo de las rutas, todas llevan /api/books blabla app.use es middleware
 app.use('/api/entries',entriesRoutes);
 app.use('/api/providers', providersRoutes);
