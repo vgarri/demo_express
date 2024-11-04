@@ -21,7 +21,7 @@ const createProvider = async (req, res) => {
 // READ
 const getProvider = async (req, res) => {
     try {
-        const Providers = await providersService.obtenerTodosLosProveedores();
+        const Providers = await providersService.obtenerProveedores();
         res.status(200).json(Providers); // Respuesta de la API para 1 Provider
     }
     catch (error) {

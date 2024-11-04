@@ -1,7 +1,7 @@
 const Provider = require('../models/providers.model');
 const Product = require('../models/products.model');
 
-const obtenerTodosLosProveedores = async () => {
+const obtenerProveedores = async () => {
     return await Provider.find();
 };
 
@@ -24,7 +24,7 @@ const deleteProvider = async (id) => {
 };
 
 module.exports = {
-    obtenerTodosLosProveedores,
+    obtenerProveedores,
     obtenerProveedorPorId,
     crearProveedor,
     editProvider,
