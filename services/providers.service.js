@@ -14,13 +14,13 @@ const crearProveedor = async (datosProvider) => {
     return await provider.save();
 };
 
-const editProvider = async (name, data) => {
-    return await Provider.findOneAndUpdate(name, data, { new: true });
+const editProvider = async (id, data) => {
+    return await Provider.findByIdAndUpdate(id, data, { new: true });
 };
 
-const deleteProvider = async (name) => {
+const deleteProvider = async (id) => {
     
-    return await Provider.findOneAndDelete(name);
+    return await Provider.findByIdAndDelete(id);
 };
 
 module.exports = {
