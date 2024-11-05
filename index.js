@@ -69,6 +69,6 @@ app.listen(port, () => {
 });
 // //se pueden enviar cosas por params (req.params)
 // //por body (req.body)
-// //por query (req.query)
+
 
 
