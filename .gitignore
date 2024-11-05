@@ -1,2 +1,14 @@
 .env
 node_modules
+books.routes.js
+entries.routes.js
+db_pgsql.js
+auth_api_key.js
+manage404.js
+entries.model.js
+queries.js
+books.routes.js
+entries.routes.js
+books.controller.js
+entries.controller.js
+products_old.controller.js
