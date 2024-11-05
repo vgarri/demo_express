@@ -34,7 +34,7 @@ const getProvider = async (req, res) => {
 const updateProvider = async (req, res) => {
 
             try {
-                const editedProvider = await providersService.editProvider(req.params.companyName, req.body);
+                const editedProvider = await providersService.editProvider(req.params.id, req.body);
                 if (editedProvider) {
                     res.status(200).json({
                         "provider_updated": editedProvider.companyName,
@@ -53,7 +53,7 @@ const updateProvider = async (req, res) => {
         // DELETE
         const deleteProvider = async (req, res) => {
             try {
-                const deletedProvider = await providersService.deleteProvider(req.params.companyName);
+                const deletedProvider = await providersService.deleteProvider(req.params.id);
                 if (deletedProvider) {
                     res.status(200).json({
                         message: `Provider: ${deletedProvider.companyName} deleted`
@@ -64,7 +64,7 @@ const updateProvider = async (req, res) => {
                 console.log(`ERROR: ${error.stack}`);
                 res.status(400).json({ msj: `ERROR: ${error.stack}` });
             }
-            res.status(200).send("Provider borrado!. Has borrado:" + req.params.id);
+            
         }
 
         module.exports = {
